@@ -761,14 +761,6 @@ def parse_model(d, ch):  # model_dict, input_channels(3)
             if m in {BottleneckCSP, SPPCSPC, C2f}:
                 args.insert(2, n)  # number of repeats
                 n = 1
-        # elif m is C2f:
-        #     c1, c2 = ch[f], args[0]
-        #     c2 = make_divisible(c2 * gw, 8)
-        #     if len(args) >1:
-        #         shortcut = args[1]
-        #         args = [c1, c2, 1, shortcut]
-        #     else:
-        #         args =[c1, c2, 1]
         elif m is nn.BatchNorm2d:
             args = [ch[f]]
         elif m is Concat:

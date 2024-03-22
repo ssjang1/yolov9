@@ -1,0 +1,38 @@
+Overriding model.yaml nc=80 with nc=7
+                 from  n    params  module                                  arguments
+  0                -1  1       464  models.common.Conv                      [3, 16, 3, 2]
+  1                -1  1      4672  models.common.Conv                      [16, 32, 3, 2]
+  2                -1  1      7360  models.common.C2f                       [32, 32, 1, True]
+  3                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  4                -1  2     49664  models.common.C2f                       [64, 64, 2, True]
+  5                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  6                -1  2    197632  models.common.C2f                       [128, 128, 2, True]
+  7                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  8                -1  1    460288  models.common.C2f                       [256, 256, 1, True]
+  9                -1  1    164608  models.common.SPPF                      [256, 256, 5]
+ 10                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 11           [-1, 6]  1         0  models.common.Concat                    [1]
+ 12                -1  1    148224  models.common.C2f                       [384, 128, 1]
+ 13                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 14           [-1, 4]  1         0  models.common.Concat                    [1]
+ 15                -1  1     37248  models.common.C2f                       [192, 64, 1]
+ 16                -1  1     36992  models.common.Conv                      [64, 64, 3, 2]
+ 17          [-1, 12]  1         0  models.common.Concat                    [1]
+ 18                -1  1    123648  models.common.C2f                       [192, 128, 1]
+ 19                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 20           [-1, 9]  1         0  models.common.Concat                    [1]
+ 21                -1  1    493056  models.common.C2f                       [384, 256, 1]
+ 22      [15, 18, 21]  1    752677  models.yolo.Detect8                     [7, [64, 128, 256]]
+yolov8n summary: 225 layers, 3012213 parameters, 3012197 gradients, 8.2 GFLOPs
+[34m[1mAMP: [39m[22mchecks passed ✅
+Traceback (most recent call last):
+  File "/home/shawn/projects/yolov9/train.py", line 634, in <module>
+    main(opt)
+  File "/home/shawn/projects/yolov9/train.py", line 528, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "/home/shawn/projects/yolov9/train.py", line 129, in train
+    gs = max(int(model.stride.max()), 32)  # grid size (max stride)
+                 ^^^^^^^^^^^^
+  File "/home/shawn/anaconda3/envs/torch/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1695, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DetectionModel' object has no attribute 'stride'

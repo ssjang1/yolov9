@@ -1,0 +1,121 @@
+{
+    "os": "Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-03-08T02:59:27.787132",
+    "startedAt": "2024-03-08T02:59:26.958523",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--cfg",
+        "models/detect/yolov8n.yaml",
+        "--data",
+        "data/data.yaml",
+        "--hyp",
+        "data/hyps/hyp.scratch-high.yaml",
+        "--epochs",
+        "5",
+        "--batch-size",
+        "16",
+        "--device",
+        "0"
+    ],
+    "state": "running",
+    "program": "/home/shawn/projects/yolov9/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/ssjang1/yolov9.git",
+        "commit": "1d51718f5ea142edf617ae18370099270e199bf7"
+    },
+    "email": "s104183@naver.com",
+    "root": "/home/shawn/projects/yolov9",
+    "host": "dev3",
+    "username": "shawn",
+    "executable": "/home/shawn/anaconda3/envs/torch/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3600.0100000000016,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3600.01,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1006.853931427002,
+            "used": 174.43871307373047
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1660 SUPER",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1660 SUPER",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 31.311656951904297
+    }
+}
